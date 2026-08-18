@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiva Bill Estimate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="brand">SHIVA ENTERPRISES</div>
+      <small>Personal Bill Estimate</small>
+    </div>
+    <button id="logoutBtn" class="secondary">Logout</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Estimate Details</h2>
+      <div class="grid">
+        <div><label>Customer Name</label><input id="customerName" placeholder="Customer name"></div>
+        <div><label>Phone</label><input id="customerPhone" placeholder="Phone number"></div>
+        <div><label>Estimate No.</label><input id="estimateNo" placeholder="EST-001"></div>
+        <div><label>Date</label><input id="estimateDate" type="date"></div>
+        <div class="wide"><label>Address</label><textarea id="customerAddress" rows="2" placeholder="Customer address"></textarea></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>Items</h2>
+        <button id="addRowBtn" class="secondary">+ Add Row</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Description</th><th>Qty</th><th>Rate</th><th>Amount</th><th></th></tr>
+          </thead>
+          <tbody id="itemsBody"></tbody>
+        </table>
+      </div>
+
+      <div class="totals">
+        <div><span>Subtotal</span><strong id="subtotal">₹0.00</strong></div>
+        <div><span>Discount</span><input id="discount" type="number" min="0" value="0"></div>
+        <div class="grand"><span>Total</span><strong id="grandTotal">₹0.00</strong></div>
+      </div>
+
+      <div class="actions">
+        <button id="printBtn">Print / Save PDF</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+      </div>
+    </section>
+
+    <section class="card note">
+      <h3>Sample template</h3>
+      <p>Edit the HTML/CSS later to add your own logo, colors, address, columns, and 20-row layout.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
